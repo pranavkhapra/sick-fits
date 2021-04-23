@@ -9,13 +9,13 @@ const LogoStyles = styled.h1`
   position: relative;
   z-index: 2;
   transform: skew(-7deg);
-
+  transition: 0.3s;
+  background: orange;
   a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
-    background: orange;
   }
 `;
 const HeaderStyles = styled.header`
@@ -37,7 +37,9 @@ function Header() {
     <HeaderStyles>
       <div className="bar">
         <LogoStyles>
-          <Link href="/">Uzumaki Store</Link>
+          <Link href="/" className="english">
+            Uzumaki Store
+          </Link>
         </LogoStyles>
       </div>
       <div className="sub-bar">
