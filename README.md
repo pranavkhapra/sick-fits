@@ -1,1 +1,1 @@
-# sick-fits
+# uzumaki-store
