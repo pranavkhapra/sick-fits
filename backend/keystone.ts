@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
+import { User } from './schemas/User';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -28,9 +29,10 @@ export default config({
     url: databaseURL,
     // Todo :Add data seeding here
   },
-  // the data types and all
+  // the data types and all basically the user and the other schema
   lists: createSchema({
     // Schema items go in here
+    User,
   }),
   // the roles and all of the ui of the keystone dashboard sometimes you dont want to show them
   ui: {
