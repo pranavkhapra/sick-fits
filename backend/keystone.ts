@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import { createAuth } from '@keystone-next/auth';
@@ -6,6 +7,7 @@ import {
   statelessSessions,
 } from '@keystone-next/keystone/session';
 import { User } from './schemas/User';
+import { Product } from './schemas/Product';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -51,6 +53,7 @@ export default withAuth(
     lists: createSchema({
       // Schema items go in here
       User,
+      Product,
     }),
     // the roles and all of the ui of the keystone dashboard sometimes you dont want to show them
     ui: {
