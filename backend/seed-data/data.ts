@@ -7,19 +7,20 @@ function timestamp() {
 
 export const products = [
   {
-    name: 'Yeti Hondo',
-    description: 'soo nice',
+    name: 'Hokage Chair',
+    description:
+      'The Hokage (火影, Literally meaning: Fire Shadow) is the Kage of Konohagakure, a title bestowed on the village leader. The Hokage is generally regarded as the strongest shinobi in the land of fire.',
     status: 'AVAILABLE',
     price: 3423,
     photo: {
-      id: '5dfbed262849d7961377c2c0',
-      filename: 'hondo.jpg',
-      originalFilename: 'hondo.jpg',
+      id: 'naruto_chair_dqod4h',
+      filename: 'naruto_chair_dqod4h.jpg',
+      originalFilename: 'naruto_chair_dqod4h.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5dfbed262849d7961377c2c0',
-        version: 1576791335,
+        public_id: 'uzumaki_store/naruto_chair_dqod4h',
+        version: 1619261952,
         signature: '9f7d5115788b7677307a39214f9684dd827ea5f9',
         width: 750,
         height: 457,
@@ -32,9 +33,9 @@ export const products = [
         etag: 'e1fdf84d5126b6ca2e1c8ef9532be5a5',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1576791335/sick-fits-keystone/5dfbed262849d7961377c2c0.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619261952/uzumaki_store/naruto_chair_dqod4h.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1576791335/sick-fits-keystone/5dfbed262849d7961377c2c0.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619261952/uzumaki_store/naruto_chair_dqod4h.jpg',
         original_filename: 'file',
       },
     },
@@ -46,19 +47,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Airmax 270',
-    description: 'Great shoes!',
+    name: 'Kakashi Nike Custom',
+    description:
+      'Kakashi is one of the Hidden Leaf Villages "Jounin" (elite/top-level ninja), and Team 7s trainer/teacher. He wears a ninja mask covering his face up just below the eyes and wears his headband skewed on his head, covering his left eye.',
     status: 'AVAILABLE',
     price: 5234,
     photo: {
-      id: '5e2a13f0689b2835ae71d1a5',
-      filename: '270-camo-sunset.jpg',
-      originalFilename: '270-camo-sunset.jpg',
+      id: 'kakashi_shoes_arx44f',
+      filename: 'kakashi_shoes_arx44f.png',
+      originalFilename: 'kakashi_shoes_arx44f.png',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a13f0689b2835ae71d1a5',
-        version: 1579815920,
+        public_id: 'uzumaki_store/kakashi_shoes_arx44f',
+        version: 1619245383,
         signature: 'a430b2d35f6a03dc562f6f56a474deb6810e393f',
         width: 960,
         height: 640,
@@ -71,9 +73,9 @@ export const products = [
         etag: 'aebe8e9cc98ee4ad71682f19af85745b',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579815920/sick-fits-keystone/5e2a13f0689b2835ae71d1a5.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245383/uzumaki_store/kakashi_shoes_arx44f.png',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579815920/sick-fits-keystone/5e2a13f0689b2835ae71d1a5.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245383/uzumaki_store/kakashi_shoes_arx44f.png',
         original_filename: 'file',
       },
     },
@@ -85,19 +87,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'KITH Hoodie',
-    description: 'Love this hoodie',
+    name: 'Uchiha Hoodie',
+    description:
+      'The Uchiha Clan (うちは一族, Uchiha Ichizoku) is one of the four noble clans of Konohagakure, reputed to be the villages strongest because of their Sharingan and natural battle prowess.',
     status: 'AVAILABLE',
     price: 23562,
     photo: {
-      id: '5e2a13ff689b2835ae71d1a7',
-      filename: 'kith-hoodie.jpg',
-      originalFilename: 'kith-hoodie.jpg',
+      id: 'naruto-jacket_ujikgo',
+      filename: 'naruto-jacket_ujikgo.jpg',
+      originalFilename: 'naruto-jacket_ujikgo.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a13ff689b2835ae71d1a7',
-        version: 1579815935,
+        public_id: 'uzumaki_store/naruto-jacket_ujikgo',
+        version: 1619245348,
         signature: '360df116020320a14845cf235b87a4a5cdc23f86',
         width: 2000,
         height: 2000,
@@ -110,9 +113,9 @@ export const products = [
         etag: 'b6fbc18b196c68e2b87f51539b849e70',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579815935/sick-fits-keystone/5e2a13ff689b2835ae71d1a7.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245348/uzumaki_store/naruto-jacket_ujikgo.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579815935/sick-fits-keystone/5e2a13ff689b2835ae71d1a7.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245348/uzumaki_store/naruto-jacket_ujikgo.jpg',
         original_filename: 'file',
       },
     },
@@ -124,19 +127,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Fanorak',
-    description: 'Super hip. Comes in a number of colours',
+    name: 'Naruto Uzumaki Jacket',
+    description:
+      'Naruto Uzumaki (うずまきナルト, Uzumaki Naruto) is a shinobi of Konohagakure. ... He soon proved to be one of the main factors in winning the Fourth Shinobi World War, leading him to achieve his dream and become the villages Seventh Hokage (七代目火影, Nanadaime Hokage, lit. Seventh Fire Shadow).',
     status: 'AVAILABLE',
     price: 252342,
     photo: {
-      id: '5e2a1413689b2835ae71d1a9',
-      filename: 'TNF-fanorak.png',
-      originalFilename: 'TNF-fanorak.png',
+      id: 'naruto__jacket3_vw6yvq',
+      filename: 'naruto__jacket3_vw6yvq.jpg',
+      originalFilename: 'naruto__jacket3_vw6yvq.png',
       mimetype: 'image/png',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a1413689b2835ae71d1a9',
-        version: 1579815957,
+        public_id: 'uzumaki_store/naruto__jacket3_vw6yvq',
+        version: 1619245380,
         signature: 'affd16fa20107a4d5399aab553ea77fff1c4b2ef',
         width: 1276,
         height: 1490,
@@ -149,9 +153,9 @@ export const products = [
         etag: 'ce0f36da93c60c5d4406657225206f70',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579815957/sick-fits-keystone/5e2a1413689b2835ae71d1a9.png',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto__jacket3_vw6yvq.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579815957/sick-fits-keystone/5e2a1413689b2835ae71d1a9.png',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto__jacket3_vw6yvq.jpg',
         original_filename: 'file',
       },
     },
@@ -163,19 +167,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Nike Vapormax',
-    description: 'Kind of squeaky on some floors',
+    name: 'Naruto Sasuke Custom',
+    description:
+      'They may be on opposite sides of several conflicts, but they also are loyal to one another, in their own way. Sasuke always believes in Narutos abilities, and Naruto always assumes his friend will one day come back to him. These are just two examples, among many other things, of course',
     status: 'AVAILABLE',
     price: 83456,
     photo: {
-      id: '5e2a142c689b2835ae71d1ab',
-      filename: 'vapormax.jpg',
-      originalFilename: 'vapormax.jpg',
+      id: 'naruto_shoes_f9iniz',
+      filename: 'naruto_shoes_f9iniz.jpg',
+      originalFilename: 'naruto_shoes_f9iniz.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a142c689b2835ae71d1ab',
-        version: 1579815980,
+        public_id: 'uzumaki_store/naruto_shoes_f9iniz',
+        version: 1619245380,
         signature: '6dd95447407c06ba955164c4961bd4abc2fb9f4d',
         width: 1100,
         height: 735,
@@ -188,9 +193,9 @@ export const products = [
         etag: '5550566c7fab113ba32d85ed08f54faa',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579815980/sick-fits-keystone/5e2a142c689b2835ae71d1ab.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_shoes_f9iniz.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579815980/sick-fits-keystone/5e2a142c689b2835ae71d1ab.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_shoes_f9iniz.jpg',
         original_filename: 'file',
       },
     },
@@ -202,19 +207,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Yeti Cooler',
-    description: 'Who spends this much on a cooler?!',
+    name: 'Naruto Bag',
+    description:
+      'Naruto (Japanese: NARUTO ナルト ) is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.',
     status: 'AVAILABLE',
     price: 75654,
     photo: {
-      id: '5e2a143f689b2835ae71d1ad',
-      filename: 'coral-yeti.jpg',
-      originalFilename: 'coral-yeti.jpg',
+      id: 'naruto_bag2_q2vzdx',
+      filename: 'naruto_bag2_q2vzdx.webP',
+      originalFilename: 'naruto_bag2_q2vzdx.webP',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a143f689b2835ae71d1ad',
-        version: 1579815999,
+        public_id: 'uzumaki_store/naruto_bag2_q2vzdx',
+        version: 1619245378,
         signature: '97e8f27cdbb6a736062391b9ac3a5c689bd50646',
         width: 1300,
         height: 1144,
@@ -227,9 +233,9 @@ export const products = [
         etag: '3655bfd83998492b8421782db868c9df',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579815999/sick-fits-keystone/5e2a143f689b2835ae71d1ad.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag2_q2vzdx.webp',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579815999/sick-fits-keystone/5e2a143f689b2835ae71d1ad.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag2_q2vzdx.webp',
         original_filename: 'file',
       },
     },
@@ -241,19 +247,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Naked and Famous Denim',
-    description: 'Japanese Denim, made in Canada',
+    name: 'Naruto Manga Custom Denim',
+    description:
+      'It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story is told in two parts – the first set in Narutos pre-teen years, and the second in his teens.',
     status: 'AVAILABLE',
     price: 10924,
     photo: {
-      id: '5e2a145d689b2835ae71d1af',
-      filename: 'naked-and-famous-denim.jpg',
-      originalFilename: 'naked-and-famous-denim.jpg',
+      id: 'naruto_jeans_d8kobi',
+      filename: 'naruto_jeans_d8kobi.jpg',
+      originalFilename: 'naruto_jeans_d8kobi.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a145d689b2835ae71d1af',
-        version: 1579816030,
+        public_id: 'uzumaki_store/naruto_jeans_d8kobi',
+        version: 1619245380,
         signature: '76dec3670cc4a4c22723720bb94496a35945c626',
         width: 1024,
         height: 683,
@@ -266,9 +273,9 @@ export const products = [
         etag: '3d68591332785ae5273ed43b1aa91712',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816030/sick-fits-keystone/5e2a145d689b2835ae71d1af.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_jeans_d8kobi.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816030/sick-fits-keystone/5e2a145d689b2835ae71d1af.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_jeans_d8kobi.jpg',
         original_filename: 'file',
       },
     },
@@ -280,19 +287,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Rimowa Luggage',
-    description: 'S T E A L T H',
+    name: 'Naruto Seal Bag',
+    description:
+      'Minato Namikaze used the Eight Trigrams Sealing Style to seal the Nine-Tails into his infant son, Naruto Uzumaki. Before Minato performed the seal, he summoned a ceremonial altar that he placed Naruto on. Narutos seal is located on his abdomen, but only becomes visible when he uses the Nine-Tails chakra.',
     status: 'AVAILABLE',
     price: 47734,
     photo: {
-      id: '5e2a147b689b2835ae71d1b1',
-      filename: 'rimowa.png',
-      originalFilename: 'rimowa.png',
+      id: 'naruto_bag1_th6z5q',
+      filename: 'naruto_bag1_th6z5q.png',
+      originalFilename: 'naruto_bag1_th6z5q.png',
       mimetype: 'image/png',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a147b689b2835ae71d1b1',
-        version: 1579816060,
+        public_id: 'uzumaki_store/naruto_bag1_th6z5q',
+        version: 1619245378,
         signature: 'a6161568d2d59a59e8dba9b15e705581198ea377',
         width: 800,
         height: 1004,
@@ -305,9 +313,9 @@ export const products = [
         etag: 'd89ab8ecc366bc63464a3eeef6ef3010',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816060/sick-fits-keystone/5e2a147b689b2835ae71d1b1.png',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag1_th6z5q.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816060/sick-fits-keystone/5e2a147b689b2835ae71d1b1.png',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag1_th6z5q.jpg',
         original_filename: 'file',
       },
     },
@@ -319,19 +327,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Black Hole ',
-    description: 'Outdoorsy ',
+    name: 'Sasuke Bag ',
+    description:
+      'Sasuke Uchiha is a ninja from the Hidden Leaf Village. He is the younger brother of Itachi. He spent some of his childhood with his family the Uchiha Clan, one of the villages most powerful clans. They have a special kekkei genkai called the Sharingan',
     status: 'AVAILABLE',
     price: 4534,
     photo: {
-      id: '5e2a149b689b2835ae71d1b3',
-      filename: 'patagonia black hole.jpg',
-      originalFilename: 'patagonia black hole.jpg',
+      id: 'sasuke_bag_eduqql',
+      filename: 'sasuke_bag_eduqql.jpg',
+      originalFilename: 'sasuke_bag_eduqql.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a149b689b2835ae71d1b3',
-        version: 1579816093,
+        public_id: 'uzumaki_store/sasuke_bag_eduqql',
+        version: 1619263847,
         signature: '6ac148051cb4ba0227ee49fd61fa1348ab4a9870',
         width: 2000,
         height: 2000,
@@ -344,9 +353,9 @@ export const products = [
         etag: '8aed0984d37a3d12faa832860b29d24b',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816093/sick-fits-keystone/5e2a149b689b2835ae71d1b3.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619263847/uzumaki_store/sasuke_bag_eduqql.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816093/sick-fits-keystone/5e2a149b689b2835ae71d1b3.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619263847/uzumaki_store/sasuke_bag_eduqql.jpg',
         original_filename: 'file',
       },
     },
@@ -358,19 +367,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Nudie Belt',
-    description: 'Sick design',
+    name: 'Konoha Village HeadBand',
+    description:
+      'A forehead protector (額当て, Hitai-ate) is a headband composed of a metal plate and a band of cloth. Forehead protectors are worn by most shinobi and are engraved with the symbol of their hidden village.',
     status: 'AVAILABLE',
     price: 5234,
     photo: {
-      id: '5e2a14b1689b2835ae71d1b5',
-      filename: 'nudie-belt.jpg',
-      originalFilename: 'nudie-belt.jpg',
+      id: 'naruto_headband_ngktxl',
+      filename: 'naruto_headband_ngktxl.jpg',
+      originalFilename: 'naruto_headband_ngktxl.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a14b1689b2835ae71d1b5',
-        version: 1579816114,
+        public_id: 'uzumaki_store/naruto_headband_ngktxl',
+        version: 1619245377,
         signature: '24f3ff4ae91dfcc8d1ddeb1a713215730e834be4',
         width: 650,
         height: 650,
@@ -383,9 +393,9 @@ export const products = [
         etag: '3a4b97ef88c550dcd6c2d399d1bc698e',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816114/sick-fits-keystone/5e2a14b1689b2835ae71d1b5.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_headband_ngktxl.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816114/sick-fits-keystone/5e2a14b1689b2835ae71d1b5.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_headband_ngktxl.jpg',
         original_filename: 'file',
       },
     },
@@ -397,19 +407,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Goose',
-    description: 'Keep warm.',
+    name: 'Naruto Sasuke Jacket',
+    description:
+      'Sasuke is the ninja that Naruto wants to be early on, and their rivalry only continues to grow. He always challenged Naruto to continue to become stronger and in doing so became one of the most powerful shinobi of all time. ... Sasuke is an avenger, and his duty to the Uchiha clan is what drove him to get so strong',
     status: 'AVAILABLE',
     price: 74544,
     photo: {
-      id: '5e2a14bf689b2835ae71d1b7',
-      filename: 'canada-goose.jpg',
-      originalFilename: 'canada-goose.jpg',
+      id: 'naruto_jacket2_syql9i',
+      filename: 'naruto_jacket2_syql9i.jpg',
+      originalFilename: 'naruto_jacket2_syql9i.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a14bf689b2835ae71d1b7',
-        version: 1579816128,
+        public_id: 'uzumaki_store/naruto_jacket2_syql9i',
+        version: 1619245377,
         signature: 'bebf3d817e91cdbb91768e8c9c2133a78798a317',
         width: 800,
         height: 800,
@@ -422,9 +433,9 @@ export const products = [
         etag: 'f9c8725f815a6873cbdc47ba3f869049',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816128/sick-fits-keystone/5e2a14bf689b2835ae71d1b7.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_jacket2_syql9i.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816128/sick-fits-keystone/5e2a14bf689b2835ae71d1b7.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_jacket2_syql9i.jpg',
         original_filename: 'file',
       },
     },
@@ -436,19 +447,20 @@ export const products = [
     // createdAt_offset: '+00:00',
   },
   {
-    name: 'Ultraboost',
-    description: 'blacked out',
+    name: 'Naruto Nike Airforce',
+    description:
+      'Kurama (九喇嘛, Kurama), more commonly known as the Nine-Tails (九尾, Kyūbi), was one of the nine tailed beasts. Centuries of being regarded as a mindless monster and sought after as a tool for war caused Kurama to hate humans.',
     status: 'AVAILABLE',
     price: 6344,
     photo: {
-      id: '5e2a14cc689b2835ae71d1b9',
-      filename: 'ultra-boost.jpg',
-      originalFilename: 'ultra-boost.jpg',
+      id: 'naruto_shoes2_yy95uo',
+      filename: 'naruto_shoes2_yy95uo.jpg',
+      originalFilename: 'naruto_shoes2_yy95uo.jpg',
       mimetype: 'image/jpeg',
       encoding: '7bit',
       _meta: {
-        public_id: 'sick-fits-keystone/5e2a14cc689b2835ae71d1b9',
-        version: 1579816141,
+        public_id: 'uzumaki_store/naruto_shoes2_yy95uo',
+        version: 1619264400,
         signature: '18720c13b7f6d4fcde919dddb33d1c711a459c14',
         width: 565,
         height: 372,
@@ -461,9 +473,9 @@ export const products = [
         etag: '44cf57f8218f135b82cfa5df0da92a49',
         placeholder: false,
         url:
-          'http://res.cloudinary.com/wesbos/image/upload/v1579816141/sick-fits-keystone/5e2a14cc689b2835ae71d1b9.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619264400/uzumaki_store/naruto_shoes2_yy95uo.jpg',
         secure_url:
-          'https://res.cloudinary.com/wesbos/image/upload/v1579816141/sick-fits-keystone/5e2a14cc689b2835ae71d1b9.jpg',
+          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619264400/uzumaki_store/naruto_shoes2_yy95uo.jpg',
         original_filename: 'file',
       },
     },

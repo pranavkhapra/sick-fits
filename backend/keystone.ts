@@ -48,7 +48,10 @@ export default withAuth(
       adapter: 'mongoose',
       // the database url
       url: databaseURL,
-      // Todo :Add data seeding here
+      // Todo :Add data seeding here data seeding means the data i have created in the seed-data the fake data of all images and all
+      onConnect() {
+        console.log('connected to the database');
+      },
     },
     // the data types and all basically the user and the other schema
     lists: createSchema({
