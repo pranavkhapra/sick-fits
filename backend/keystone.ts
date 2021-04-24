@@ -9,6 +9,7 @@ import {
 import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
+import { insertSeedData } from './seed-data';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -43,14 +44,21 @@ export default withAuth(
         credentials: true,
       },
     },
+    // database connection
     db: {
       // database adapter knex or mongoose mongoose for mongo and other for postgres
       adapter: 'mongoose',
       // the database url
       url: databaseURL,
       // Todo :Add data seeding here data seeding means the data i have created in the seed-data the fake data of all images and all
-      onConnect() {
+      // enttire keystone value and all
+      async onConnect(keystone) {
         console.log('connected to the database');
+        // only when a person passes a argument to keystone when the run it
+        if (process.argv.includes('--seed-data')) {
+          // the seed data function that basically seed all the data
+          await insertSeedData(keystone);
+        }
       },
     },
     // the data types and all basically the user and the other schema
@@ -65,12 +73,11 @@ export default withAuth(
       // todo: change this for roles
       // we want to show the ui who pass this test
       //   isAccessAllowed: () => true,
-      isAccessAllowed: ({ session }) => {
-        console.log(session);
+      isAccessAllowed: ({ session }) =>
+        // console.log(session); //the user name and all the info
         // if there is session and there is data it would return true
 
-        return !!session?.data;
-      },
+        !!session?.data,
     },
     // todo add session values here
     // bascially we just created a with auth so there would be cookie passed as a person is logged in so
