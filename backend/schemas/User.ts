@@ -4,7 +4,7 @@ import { text, password, relationship } from '@keystone-next/fields';
 // named export not export default name export is {}
 export const User = list({
   // access:
-  // that should they be able to see keystone ui or not
+  // that..... should they be able to see keystone ui or not
   // ui
   fields: {
     name: text({
