@@ -25,6 +25,17 @@ function MyApp({ Component, pageProps, apollo }) {
     </ApolloProvider>
   );
 }
-
+// now we need nextjs to know it need to fetch all the query that are in the children component
+// ctx ic context
+MyApp.getInitialProps = async function ({ Component, ctx }) {
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    // if any of the page have getInitialProps which they will have because thats what withData is adding to them then we are going to wait and fetch it
+    pageProps = await Component.getInitialProps(ctx);
+  }
+  // it will basically aloow us to get any query variable /product/2 type
+  pageProps.query = ctx.query;
+  return { pageProps };
+};
 // we did to get the apollo from the withData component
 export default withData(MyApp);
