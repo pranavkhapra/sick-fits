@@ -10,7 +10,7 @@ const LogoStyles = styled.h1`
   z-index: 2;
   transform: skew(-7deg);
   transition: 0.3s;
-  background: orange;
+  background: #e94a12;
   a {
     color: white;
     text-decoration: none;

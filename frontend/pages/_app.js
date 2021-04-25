@@ -3,21 +3,28 @@
 import React from 'react';
 import Nprogress from 'nprogress';
 import Router from 'next/router';
+import { ApolloProvider } from '@apollo/client';
+
 import Page from '../components/Page';
 // todo swap with your own your own nprogress
 // import 'nprogress/nprogress.css';
 import '../components/styles/nprogress.css';
+import withData from '../lib/withData';
 
 Router.events.on('routeChangeStart', () => Nprogress.start());
 Router.events.on('routeChangeComplete', () => Nprogress.done());
 Router.events.on('routeChangeError', () => Nprogress.done());
-
-function MyApp({ Component, pageProps }) {
+// this apollo prop is coming from withData
+function MyApp({ Component, pageProps, apollo }) {
   return (
-    <Page>
-      <Component {...pageProps} />
-    </Page>
+    // injecting apollo client to it
+    <ApolloProvider client={apollo}>
+      <Page>
+        <Component {...pageProps} />
+      </Page>
+    </ApolloProvider>
   );
 }
 
-export default MyApp;
+// we did to get the apollo from the withData component
+export default withData(MyApp);
