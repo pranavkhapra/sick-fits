@@ -56,7 +56,6 @@ function Page({ children }) {
   return (
     <>
       <GlobalStyles />
-      <p>Yo the Page Component</p>
       <Header />
       <InnerStyles>{children}</InnerStyles>
     </>

@@ -41,11 +41,11 @@ function Header() {
             Uzumaki Store
           </Link>
         </LogoStyles>
+        <Nav />
       </div>
       <div className="sub-bar">
         <p>Search</p>
       </div>
-      <Nav />
     </HeaderStyles>
   );
 }

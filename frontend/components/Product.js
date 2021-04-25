@@ -13,14 +13,15 @@ export default function Product({ product }) {
         src={product?.photo?.image?.publicUrlTransformed}
         alt={product.name}
       />
-      <p>
-        {/* {`${product.description.substring(0, 800)}...`}
-        <a href="#">Read more</a> */}
-      </p>
+
       <Title>
         <Link href={`/product/${product.id}`}>{product.name}</Link>
       </Title>
       <PriceTag>{formatMoney(product.price)}</PriceTag>
+      <p>
+        {/* {`${product.description.substring(0, 800)}...`}
+        <a href="#">Read more</a> */}
+      </p>
     </ItemStyles>
   );
 }
