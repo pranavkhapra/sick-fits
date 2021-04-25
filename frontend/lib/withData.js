@@ -55,6 +55,7 @@ function createClient({ headers, initialState }) {
       },
       // it will restore any intital state
       // if there is any intial state restore it other wise go ahead
+      // so that we dont hit the api again again and again
     }).restore(initialState || {}),
   });
 }

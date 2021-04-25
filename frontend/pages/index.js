@@ -1,7 +1,5 @@
-import React from 'react';
+import ProductsPage from './products';
 
-function IndexPage() {
-  return <div>IndexPage</div>;
-}
+export default ProductsPage;
 
-export default IndexPage;
+// basically we need just same page for products and index
