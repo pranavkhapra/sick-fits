@@ -35,7 +35,7 @@ const NavStyles = styled.ul`
     }
     &:after {
       height: 2px;
-      background: red;
+      background: #c400f9;
       content: '';
       width: 0;
       position: absolute;
@@ -48,7 +48,8 @@ const NavStyles = styled.ul`
     &:hover,
     &:focus {
       outline: none;
-      text-decoration:none;
+      // eslint-disable-next-line prettier/prettier
+      text-decoration: none;
       &:after {
         width: calc(100% - 60px);
       }
