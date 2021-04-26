@@ -30,7 +30,7 @@ function Products() {
   // it will return the data,errors or it is currently loading
   // use query it the hook we are using to get data
   const { data, error, loading } = useQuery(ALL_PRODUCTS_QUERY);
-  console.log(data, error, loading);
+  // console.log(data, error, loading);
   if (loading) return <p>Loading....</p>;
   if (error) return <p>{error.message}</p>;
   return (
