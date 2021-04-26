@@ -19,8 +19,9 @@ export default function Product({ product }) {
       </Title>
       <PriceTag>{formatMoney(product.price)}</PriceTag>
       <p>
-        {/* {`${product.description.substring(0, 800)}...`}
-        <a href="#">Read more</a> */}
+        {`${product.description.substring(0, 40)}...`}
+        <Link href={`/product/${product.id}`}>Read more</Link>
+        {/* {product.description} */}
       </p>
     </ItemStyles>
   );
