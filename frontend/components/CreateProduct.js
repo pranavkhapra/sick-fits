@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import useForm from '../lib/useForm';
 import DisplayError from './DisplayError';
 import Form from './styles/Form';
+import { ALL_PRODUCTS_QUERY } from './Products';
 
 const CREATE_PRODUCT_MUTATION = gql`
   mutation CREATE_PRODUCT_MUTATION(
@@ -44,6 +45,8 @@ export default function CreateProduct() {
       // anyadditioanl data we need to come along we need to have the variable
       // because whole inputs are our variable
       variables: inputs,
+      // for the update of the query when mutation happen
+      refetchQueries: [{ query: ALL_PRODUCTS_QUERY }],
     }
   );
 
