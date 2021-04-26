@@ -11,8 +11,9 @@ function ProductPage() {
   return (
     <div>
       {/* the current page we are on */}
+      {/* we will send this to the pagination and all */}
       <Pagination page={page || 1} />
-      <Products />
+      <Products page={page || 1} />
       <Pagination page={page || 1} />
     </div>
   );
