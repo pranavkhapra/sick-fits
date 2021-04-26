@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import Router from 'next/router';
 import useForm from '../lib/useForm';
 import DisplayError from './DisplayError';
 import Form from './styles/Form';
@@ -58,6 +59,14 @@ export default function CreateProduct() {
         const response = await createProduct();
         // when it is created clear the form
         clearForm();
+        // then we need to go to the product page becausee its sickkkkkkkkkkkkkkkkk
+        // Like when you change the page and all i want to basically
+        // take the user to the product created page so we use here a
+        //  Programmatically Changing the Page thing not like declarative used in header and all so
+        // when onSubmit after getting response clearing form we will use this
+        Router.push({
+          pathname: `/product/${response.data.createProduct.id}`,
+        });
       }}
     >
       <DisplayError error={error} />
