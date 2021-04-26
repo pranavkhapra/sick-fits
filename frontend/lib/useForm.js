@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function useForm(initial = {}) {
   // create a state object for our inputs
   // the initial value if someone give a inital value and not
   const [inputs, setInputs] = useState(initial);
+  // when initial data changes just update it with useEffect and all
+  // goes from nothing to anything
+  // gives us array of object and join them with ,
+  const initialValues = Object.values(initial).join('');
+
+  useEffect(() => {
+    // This function runs when the things we are watching change
+    // we have used initalValues it will complete a infinite loop and all
+    setInputs(initial);
+  }, [initialValues]);
 
   function handleChange(event) {
     // because html elements always give a string if its number also
