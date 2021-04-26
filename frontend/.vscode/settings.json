@@ -4,7 +4,9 @@
     "titleBar.inactiveForeground": "#a6ff4d",
     // "titleBar.activeBackground": "#800080",
     // "titleBar.inactiveBackground": "#800080"
+    
   },
+  
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": false

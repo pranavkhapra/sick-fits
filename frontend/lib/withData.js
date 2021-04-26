@@ -1,6 +1,7 @@
 import { ApolloClient, ApolloLink, InMemoryCache } from '@apollo/client';
 import { onError } from '@apollo/link-error';
 import { getDataFromTree } from '@apollo/client/react/ssr';
+// help  us in mutation and the upload of the file from frontend to backend the image
 import { createUploadLink } from 'apollo-upload-client';
 import withApollo from 'next-with-apollo';
 import { endpoint, prodEndpoint } from '../config';
