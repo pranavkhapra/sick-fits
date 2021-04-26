@@ -21,6 +21,7 @@ const ProductStyles = styled.div`
 
 const SINGLE_ITEM_QUERY = gql`
   query SINGLE_ITEM_QUERY($id: ID!) {
+    #basically making it the dynamic
     Product(where: { id: $id }) {
       name
       price
@@ -50,7 +51,7 @@ export default function SingleProduct({ id }) {
   return (
     <ProductStyles>
       <Head>
-        <title>Sick Fits | {Product.name}</title>
+        <title>Uzumaki Store | {Product.name}</title>
       </Head>
       <img
         src={Product.photo.image.publicUrlTransformed}

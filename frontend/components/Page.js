@@ -2,8 +2,10 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
+// import banner from '../public/static/pexels-tyler-lastovich-997443.png';
 
 const GlobalStyles = createGlobalStyle`
+
  @font-face {
     font-family: 'radnika_next';
     src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
