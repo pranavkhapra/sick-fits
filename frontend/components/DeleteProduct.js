@@ -10,6 +10,11 @@ const DELETE_PRODUCT_MUTATION = gql`
     }
   }
 `;
+// payload is what will contain the id and the name of the item
+function update(cache, payload) {
+  // cache identify identity where the item is and cache evict will delete it
+  cache.evict(cache.identify(payload.data.deleteProduct));
+}
 export default function DeleteProduct({ id, children }) {
   const [deleteProduct, { loading, error }] = useMutation(
     DELETE_PRODUCT_MUTATION,
@@ -17,6 +22,7 @@ export default function DeleteProduct({ id, children }) {
       variables: {
         id,
       },
+      update,
     }
   );
   return (
