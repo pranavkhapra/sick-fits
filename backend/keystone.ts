@@ -11,6 +11,7 @@ import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
 import { insertSeedData } from './seed-data';
+import { sendPasswordResetEmail } from './lib/mail';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -36,7 +37,9 @@ const { withAuth } = createAuth({
   passwordResetLink: {
     async sendToken(args) {
       // only create the token which we want to reset the password
-      console.log(args);
+      // console.log(args);
+      // args,identity is basically who is going you send it to
+      await sendPasswordResetEmail(args.token, args.identity);
     },
   },
   // Todo:Add inn initial role and all
@@ -82,9 +85,9 @@ export default withAuth(
       // we want to show the ui who pass this test
       //   isAccessAllowed: () => true,
       isAccessAllowed: ({ session }) =>
-        // eslint-disable-next-line prettier/prettier
+      // eslint-disable-next-line prettier/prettier
       // console.log(session);
-        // the user name and all the info if  there is session and there is data it would return true
+      // the user name and all the info if  there is session and there is data it would return true
 
         !!session?.data,
     },
