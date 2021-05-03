@@ -5,6 +5,7 @@ import { getDataFromTree } from '@apollo/client/react/ssr';
 import { createUploadLink } from 'apollo-upload-client';
 import withApollo from 'next-with-apollo';
 import { endpoint, prodEndpoint } from '../config';
+import paginationField from './paginationField';
 
 // first we create a client and eject diff link we have
 function createClient({ headers, initialState }) {
@@ -50,7 +51,8 @@ function createClient({ headers, initialState }) {
         Query: {
           fields: {
             // TODO: We will add this together!
-            // allProducts: paginationField(),
+            // we say don't do it your way of the cache with all the variabel and all let me handle it
+            allProducts: paginationField(),
           },
         },
       },
