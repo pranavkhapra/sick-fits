@@ -21,7 +21,7 @@ function Nav() {
       )}
       {!user && (
         <>
-          <Link href="/signin">Sign In</Link>
+          <Link href="/signin">Sign In/Sign Up</Link>
         </>
       )}
     </NavStyles>
