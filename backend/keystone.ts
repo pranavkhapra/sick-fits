@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
@@ -30,6 +31,13 @@ const { withAuth } = createAuth({
   // init first item if these are not there create them and them auth
   initFirstItem: {
     fields: ['name', 'email', 'password'],
+  },
+  // this wil create a new mutation in the keystone to reset password bascially send token  for now
+  passwordResetLink: {
+    async sendToken(args) {
+      // only create the token which we want to reset the password
+      console.log(args);
+    },
   },
   // Todo:Add inn initial role and all
 });
