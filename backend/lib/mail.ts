@@ -26,6 +26,11 @@ function makeANiceEmail(text: string) {
       </div>
     `;
 }
+export interface Envelope {
+  from: string;
+  to?: string[] | null;
+}
+
 // interface is the response we get back
 export interface MailResponse {
   accepted?: string[] | null;
@@ -36,10 +41,6 @@ export interface MailResponse {
   response: string;
   envelope: Envelope;
   messageId: string;
-}
-export interface Envelope {
-  from: string;
-  to?: string[] | null;
 }
 
 export async function sendPasswordResetEmail(
