@@ -29,11 +29,12 @@ export default function paginationField() {
       // Check if we have existing items
       // filter if undefined
       const items = existing.slice(skip, skip + first).filter((x) => x);
+
       // If
       // There are items
       // AND there aren't enough items to satisfy how many were requested
       // AND we are on the last page
-      // THEN JUST SEND IT
+      // THEN JUST SEND IT when we have one item at the last page and all
 
       if (items.length && items.length !== first && page === pages) {
         return items;

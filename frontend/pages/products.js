@@ -7,7 +7,7 @@ import Products from '../components/Products';
 function ProductPage() {
   const { query } = useRouter();
   const page = parseInt(query.page);
-  console.log(page);
+  // console.log(page);
   return (
     <div>
       {/* the current page we are on */}
