@@ -85,9 +85,9 @@ export default withAuth(
       // we want to show the ui who pass this test
       //   isAccessAllowed: () => true,
       isAccessAllowed: ({ session }) =>
-      // eslint-disable-next-line prettier/prettier
+        // eslint-disable-next-line prettier/prettier
       // console.log(session);
-      // the user name and all the info if  there is session and there is data it would return true
+        // the user name and all the info if  there is session and there is data it would return true
 
         !!session?.data,
     },
