@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
+import SignOut from './SignOut';
 
 function Nav() {
   // the hook to get the user query for the things and all
@@ -15,6 +16,7 @@ function Nav() {
           <Link href="/sell">Sell</Link>
           <Link href="/orders">Orders</Link>
           <Link href="/account">Account</Link>
+          <SignOut />
         </>
       )}
       {!user && (
