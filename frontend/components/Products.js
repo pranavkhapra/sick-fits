@@ -10,6 +10,7 @@ export const ALL_PRODUCTS_QUERY = gql`
   # Write your query or mutation here
   #basically the variables we need for this query and all
   query ALL_PRODUCTS_QUERY($skip: Int = 0, $first: Int) {
+    # //skip default value should be 0
     allProducts(first: $first, skip: $skip) {
       id
       name
