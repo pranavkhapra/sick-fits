@@ -1,11 +1,11 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
-// import banner from '../public/static/pexels-tyler-lastovich-997443.png';
+// import banner from '../public/static/815769.jpg';
 
 const GlobalStyles = createGlobalStyle`
-
  @font-face {
     font-family: 'radnika_next';
     src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height:2;
+    /* background:url(${banner});  */
   }
   a {
     text-decoration: none;
