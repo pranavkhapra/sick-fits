@@ -12,6 +12,7 @@ import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
 import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
+import { CartItem } from './schemas/CartItem';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -78,6 +79,7 @@ export default withAuth(
       User,
       Product,
       ProductImage,
+      CartItem,
     }),
     // the roles and all of the ui of the keystone dashboard sometimes you dont want to show them
     ui: {
