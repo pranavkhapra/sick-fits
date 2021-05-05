@@ -45,6 +45,7 @@ function CartItem({ cartItem }) {
 
 export default function Cart() {
   // we are using the user user beacuse in the use user we are getting the cart and all remeber we link it as two way
+  // the useUser return the data with it
   const me = useUser();
   // in the cart styles if you pass it
   // CartStyles open> it will basically open as a small window cart
