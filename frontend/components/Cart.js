@@ -5,6 +5,8 @@ import { useUser } from './User';
 import Supreme from './styles/Supreme';
 import formatMoney from '../lib/formatMoney';
 import calcTotalPrice from '../lib/calcTotalPrice';
+import { useCart } from '../lib/cartState';
+import CloseButton from './styles/CloseButton';
 
 const CartItemStyles = styled.li`
   padding: 1rem 0;
@@ -49,12 +51,17 @@ export default function Cart() {
   const me = useUser();
   // in the cart styles if you pass it
   // CartStyles open> it will basically open as a small window cart
+  // now we can use this toggle of the cart open and close from the cartState which we have provided a provider at _app
+  // and now we can use in this
+  const { cartOpen, closeCart } = useCart();
   if (!me) return null;
   return (
-    <CartStyles open>
+    <CartStyles open={cartOpen}>
       <header>
         <Supreme>{me.name}'s Cart</Supreme>
+        <CloseButton onClick={closeCart}>&times;</CloseButton>
       </header>
+
       <ul>
         {me.cart.map((cartItem) => (
           <CartItem key={cartItem.id} cartItem={cartItem} />

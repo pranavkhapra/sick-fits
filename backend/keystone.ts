@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import 'dotenv/config';
@@ -7,6 +8,8 @@ import {
   withItemData,
   statelessSessions,
 } from '@keystone-next/keystone/session';
+import { extendGraphqlSchema } from './mutations';
+
 import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
@@ -81,6 +84,9 @@ export default withAuth(
       ProductImage,
       CartItem,
     }),
+
+    // the custom mutation for the add to cart
+    extendGraphqlSchema,
     // the roles and all of the ui of the keystone dashboard sometimes you dont want to show them
     ui: {
       // todo: change this for roles
