@@ -20,6 +20,8 @@ async function addToCart(
   // 2. Query the current users cart
   const allCartItems = await context.lists.CartItem.findMany({
     where: { user: { id: sesh.itemId }, product: { id: productId } },
+    //because of a error we faced for fuckkkkkk sake this was bad
+    //in keystone you have tell which thing you want and all
     resolveFields: 'id,quantity'
   });
 
