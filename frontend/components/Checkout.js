@@ -69,6 +69,8 @@ function CheckoutForm() {
     // 6. Change the page to view the order
     // 7. Close the cart
     // 8. turn the loader off
+    setLoading(false);
+    nProgress.done();
   }
   return (
     <>
