@@ -88,6 +88,7 @@ export default function Search() {
       });
     },
     // beacuse when you try to make object into string
+    // in this you can add anything to it at all
     itemToString: (item) => item?.name || '',
   });
   return (
