@@ -60,11 +60,20 @@ async function checkout(
   const amount = cartItems.reduce(function(tally: number, cartItem: CartItemCreateInput) {
     return tally + cartItem.quantity * cartItem.product.price;
   }, 0);
+  console.log(cartItems.product)
+  // const description = cartItems.map(function(cartItem: CartItemCreateInput) {
+  //   return cartItem.product.
+  // }, 0);
   // console.log(amount)
   // 3.create the payment with the stripe library and go ahead charge that
   const charge=await stripeConfig.paymentIntents.create({ 
     amount,
-    currency:'USD',
+    // customerName:'Testing Name',
+    // address:"KonohaVillage",
+    // description:'Strings Workshop Payment by Tester',
+    // name="testingCustomer",
+    // description="Basically just testing things.... ",
+    currency:'INR',
     //charge the card immediately
     confirm:true,
     //comes form frontend when we use mutation
@@ -73,12 +82,12 @@ async function checkout(
     console.log(err);
     throw new Error(err.message);
   });
+  // console.log(charge)
   // 4.convert the cart item into order item
   // 5.create the order and save it
 }
 
 export default checkout;
-
 
 
 
