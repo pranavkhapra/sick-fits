@@ -11,6 +11,7 @@ export const Order = list({
       // if we are using a  virtual that is basically not in the data base so we are using this
       //   to tell what it is going to return
       graphQLReturnType: 'String',
+      //what will shown as label and  all
       resolver(item) {
         return `${formatMoney(item.total)}`;
       },

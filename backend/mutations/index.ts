@@ -1,5 +1,6 @@
 import { graphQLSchemaExtension } from '@keystone-next/keystone/schema';
 import addToCart from './addToCart';
+import checkout from './checkout';
 
 // make a fake graphql tagged template literal
 const graphql = String.raw;
@@ -10,6 +11,8 @@ export const extendGraphqlSchema = graphQLSchemaExtension({
     type Mutation {
       # //basically we are creating a mutation that takes a mutation that is addToCart takes in a product id and then basically return the cart item
       addToCart(productId: ID): CartItem
+      # return from that will be order
+      checkout(token: String!): Order
     }
   `,
   // the node file that have function that are requested  via gql api
@@ -17,6 +20,7 @@ export const extendGraphqlSchema = graphQLSchemaExtension({
   resolvers: {
     Mutation: {
       addToCart,
+      checkout,
     },
   },
 });
