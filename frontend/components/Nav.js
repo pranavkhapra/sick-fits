@@ -19,7 +19,7 @@ function Nav() {
           <Link href="/sell">Sell</Link>
           <Link href="/orders">Orders</Link>
           <Link href="/account">Account</Link>
-          <SignOut />
+
           <button type="button" onClick={openCart}>
             My Cart
             {/* // basically in reduce we take a acc that is tally which //
@@ -33,6 +33,7 @@ function Nav() {
               )}
             />
           </button>
+          <SignOut />
         </>
       )}
       {!user && (

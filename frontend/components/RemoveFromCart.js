@@ -13,6 +13,7 @@ const BigButton = styled.button`
     cursor: pointer;
   }
 `;
+
 const REMOVE_FROM_CART_MUTATION = gql`
   mutation REMOVE_FROM_CART_MUTATION($id: ID!) {
     deleteCartItem(id: $id) {
@@ -20,11 +21,20 @@ const REMOVE_FROM_CART_MUTATION = gql`
     }
   }
 `;
+// basically now we want to remove the item when we click and its removing but we have to refresh the browser and all so.....
+// we can basically use the refetchQueries and all and Cart items and re-render and it\
+// but a fast is remove it from cache
+// it has access to the cache and the payload info that came back id basically
+function update(cache, payload) {
+  // cache identity for the id generation and all
+  cache.evict(cache.identify(payload.data.deleteCartItem));
+}
 export default function RemoveFromCart({ id }) {
   const [removeFromCart, { loading, error }] = useMutation(
     REMOVE_FROM_CART_MUTATION,
     {
       variables: { id },
+      update,
     }
   );
   return (
