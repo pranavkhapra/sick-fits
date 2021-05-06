@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
 const Dot = styled.div`
-  background: var(--red);
+  background: #fa8072;
   color: white;
   border-radius: 50%;
   padding: 0.5rem;
@@ -27,11 +27,13 @@ const AnimationStyles = styled.span`
   }
   .count-enter-active {
     transform: rotateX(0);
+    /* background: green; */
   }
   .count-exit {
     top: 0;
     position: absolute;
     transform: rotateX(0);
+    /* background: yellow; */
   }
   .count-exit-active {
     transform: scale(4) rotateX(0.5turn);
@@ -45,6 +47,7 @@ export default function CartCount({ count }) {
         <CSSTransition
           unmountOnExit
           className="count"
+          // its also the count
           classNames="count"
           key={count}
           timeout={{ enter: 400, exit: 400 }}
