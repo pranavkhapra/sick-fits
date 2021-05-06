@@ -35,6 +35,16 @@ export default function RemoveFromCart({ id }) {
     {
       variables: { id },
       update,
+      // it is like it will say i know what comes back from server
+      //   and before that i can show a fake info and all
+      //   and if the servers response is diff we change it then
+      //   optimisticResponse: {
+      //     // that comes back
+      //     deleteCartItem: {
+      //       __typename: 'CartItem',
+      //       id,
+      //     },
+      //   },
     }
   );
   return (
