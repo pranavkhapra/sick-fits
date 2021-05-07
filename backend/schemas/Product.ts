@@ -1,9 +1,15 @@
 import { integer, relationship, select, text } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
+import { isSignedIn } from '../access';
 
 export const Product = list({
-  // TODO
-  // access
+  // now if you have the incognito window of graphl api explorer when so they can't open the product when you pass the query and all
+  access: {
+    create: isSignedIn,
+    read: isSignedIn,
+    update: isSignedIn,
+    delete: isSignedIn,
+  },
   fields: {
     name: text({ isRequired: true }),
     // for descripiton you need a ui for the display mode
