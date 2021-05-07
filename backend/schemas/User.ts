@@ -1,5 +1,6 @@
 import { list } from '@keystone-next/keystone/schema';
 import { text, password, relationship } from '@keystone-next/fields';
+import { permissionFields } from './fields';
 
 // named export not export default name export is {}
 export const User = list({
@@ -10,6 +11,7 @@ export const User = list({
     name: text({
       isRequired: true,
     }),
+
     email: text({
       isRequired: true,
       isUnique: true,
