@@ -15,8 +15,10 @@ import { useState } from 'react';
 import nProgress from 'nprogress';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
+import { useRouter } from 'next/dist/client/router';
 import SickButton from './styles/SickButton';
 import { CURRENT_USER_QUERY } from './User';
+import { useCart } from '../lib/cartState';
 
 const CheckoutFormStyles = styled.form`
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.04);
@@ -48,6 +50,8 @@ const stripeLib = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY);
 
 function CheckoutForm() {
   const [error, setError] = useState();
+  const { closeCart } = useCart();
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -110,7 +114,13 @@ function CheckoutForm() {
       },
     });
     // 6. Change the page to view the order
+    router.push({
+      pathName: `/order`,
+      // after the /order we need query
+      query: { id: order.data.checkout.id },
+    });
     // 7. Close the cart
+    closeCart();
     // 8. turn the loader off
     setLoading(false);
     nProgress.done();
