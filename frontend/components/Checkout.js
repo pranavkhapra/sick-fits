@@ -116,7 +116,7 @@ function CheckoutForm() {
     // 6. Change the page to view the order
     router.push({
       // we are using / slash instead of query
-      pathName: `/order/[id]`,
+      pathname: `/order/[id]`,
       // after the /order we need query
       query: {
         id: order.data.checkout.id,
