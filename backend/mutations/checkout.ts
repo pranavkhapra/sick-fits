@@ -6,6 +6,7 @@ import {
   OrderCreateInput,
 } from '../.keystone/schema-types';
 import stripeConfig from '../lib/stripe';
+import { CartItem } from '../schemas/CartItem';
 
 // fake when we need to get the higlighting thing
 const graphql = String.raw;
@@ -84,7 +85,41 @@ async function checkout(
   });
   // console.log(charge)
   // 4.convert the cart item into order item
+  //the items in the user cart will  be now its order which he has order
+  // for each cart item we have a object order item
+  const orderItems = cartItems.map(cartItem => {
+    //the order item is the order schema here we are creating
+    const orderItem = {
+      name: cartItem.product.name,
+      description: cartItem.product.description,
+      price: cartItem.product.price,
+      quantity: cartItem.quantity,
+      //connect relation ship with the photo
+      photo: { connect: { id: cartItem.product.photo.id }},
+    }
+    return orderItem;
+  })
   // 5.create the order and save it
+  //now we have orderItems so we will create it
+  const order = await context.lists.Order.createOne({
+    data: {
+      total: charge.amount,
+      charge: charge.id,
+      //relationship with orderItems 
+      items: { create: orderItems },
+      user: { connect: { id: userId }}
+    },
+    resolveFields: false,
+  });
+
+  //6 Clean up any old cart item
+  //we create  the id 
+  const cartItemIds=cartItems.map((cartItem)=> cartItem.id)
+  //now we are deleting it to delete from the cart item
+  await context.lists.cartItem.deleteMany({
+    ids:cartItemIds
+  })
+  return order;
 }
 
 export default checkout;
