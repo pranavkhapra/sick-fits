@@ -114,11 +114,11 @@ async function checkout(
 
   //6 Clean up any old cart item
   //we create  the id 
-  const cartItemIds=cartItems.map((cartItem)=> cartItem.id)
-  //now we are deleting it to delete from the cart item
-  await context.lists.cartItem.deleteMany({
+  const cartItemIds = user.cart.map(cartItem => cartItem.id);
+    //now we are deleting it to delete from the cart item
+  await context.lists.CartItem.deleteMany({
     ids:cartItemIds
-  })
+  });
   return order;
 }
 

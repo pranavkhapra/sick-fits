@@ -26,5 +26,7 @@ export const User = list({
     }),
     orders: relationship({ ref: 'Order.user', many: true }),
     // todo roles cart and orders of the user
+    // because we need the user in the role and the role in the user
+    role: relationship({ ref: 'Role.assignedTo' }),
   },
 });
