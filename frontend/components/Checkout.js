@@ -115,9 +115,11 @@ function CheckoutForm() {
     });
     // 6. Change the page to view the order
     router.push({
-      pathName: `/order`,
+      pathName: `/order/[id]`,
       // after the /order we need query
-      query: { id: order.data.checkout.id },
+      query: {
+        id: order.data.checkout.id,
+      },
     });
     // 7. Close the cart
     closeCart();
