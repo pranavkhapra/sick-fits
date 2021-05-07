@@ -19,6 +19,7 @@ import { CartItem } from './schemas/CartItem';
 import { OrderItem } from './schemas/OrderItem';
 import { Order } from './schemas/Order';
 import { Role } from './schemas/Role';
+import { permissionsList } from './schemas/fields';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -111,7 +112,12 @@ export default withAuth(
     session: withItemData(statelessSessions(sessionConfig), {
       // graphql query
       // help so much in middle ware check user info and all
-      User: 'id name email',
+      // we know the  session has some type of info about the currently logged in user and keystone has access to session to change the item update and keystone look after it to do those things
+      // so now in every single session we have query id name email and it uses it addToCart mutation and all
+      // so now we also want to pass the role of the user so that other query and mutation can take them  and use them as we have used name email id
+      // you can't acces everything in graphql so we have just did something in the fields.ts to get all
+      // while doing this we can run all the query in array in the grapqhl or the api explorer
+      User: `id name email role { ${permissionsList.join(' ')} }`,
     }),
   })
 );

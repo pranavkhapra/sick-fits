@@ -29,7 +29,7 @@ export const permissionFields = {
 };
 
 export type Permission = keyof typeof permissionFields;
-
+// give us a array of all of them to use it in the keystone when passing to the query of the session of the user
 export const permissionsList: Permission[] = Object.keys(
   permissionFields
 ) as Permission[];
