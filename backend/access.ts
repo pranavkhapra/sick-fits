@@ -34,6 +34,9 @@ export const permissions = {
 export const rules = {
   // it always have a context that have session and all
   canManageProducts({ session }: ListAccessArgs) {
+    if (!isSignedIn({ session })) {
+      return false;
+    }
     // 1. Do they have the permission of canManageProducts
     if (permissions.canManageProducts({ session })) {
       return true;
