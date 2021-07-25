@@ -57,6 +57,7 @@ export const rules = {
     // 2. If not, do they own this item?
     return { order: { user: { id: session.itemId } } };
   },
+  //   people who can read all product can see all product that are sold or unavailable
   canReadProducts({ session }: ListAccessArgs) {
     if (permissions.canManageProducts({ session })) {
       return true; // They can read everything!

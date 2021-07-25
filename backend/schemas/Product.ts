@@ -1,14 +1,14 @@
 import { integer, relationship, select, text } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
-import { isSignedIn } from '../access';
+import { rules, isSignedIn } from '../access';
 
 export const Product = list({
   // now if you have the incognito window of graphl api explorer when so they can't open the product when you pass the query and all
   access: {
     create: isSignedIn,
-    read: isSignedIn,
-    update: isSignedIn,
-    delete: isSignedIn,
+    read: rules.canReadProducts,
+    update: rules.canManageProducts,
+    delete: rules.canManageProducts,
   },
   fields: {
     name: text({ isRequired: true }),
@@ -46,6 +46,12 @@ export const Product = list({
       },
     }),
     price: integer(),
-    // TODO ADD THE PHOTO THAT WOULD BE A RELATIONSHIP
+    // when product is created make a relationship to user.product default value is currently signed in user
+    user: relationship({
+      ref: 'User.products',
+      defaultValue: ({ context }) => ({
+        connect: { id: context.session.itemId },
+      }),
+    }),
   },
 });
