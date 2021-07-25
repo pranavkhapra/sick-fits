@@ -10,7 +10,7 @@ export const Role = list({
     // you can basically now add diff role to this scpecific user and all
     // so now you can just create a role admin and then pass him all the
     // permission and then pass this role to the user in the user field of admin
-
+    // import all the permissions
     ...permissionFields,
     assignedTo: relationship({
       ref: 'User.role',
