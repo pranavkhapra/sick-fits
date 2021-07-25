@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, apollo }) {
   );
 }
 // now we need nextjs to know it need to fetch all the query that are in the children component
-// ctx ic context
+// ctx is context
 MyApp.getInitialProps = async function ({ Component, ctx }) {
   let pageProps = {};
   if (Component.getInitialProps) {
