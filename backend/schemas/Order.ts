@@ -5,6 +5,12 @@ import { list } from '@keystone-next/keystone/schema';
 import formatMoney from '../lib/formatMoney';
 
 export const Order = list({
+  access: {
+    create: isSignedIn,
+    read: rules.canOrder,
+    update: () => false,
+    delete: () => false,
+  },
   fields: {
     label: virtual({
         //label is the virtual one for the naming 

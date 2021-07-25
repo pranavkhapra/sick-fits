@@ -2,6 +2,12 @@ import { integer, relationship, select, text } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
 
 export const OrderItem = list({
+  access: {
+    create: isSignedIn,
+    read: rules.canManageOrderItems,
+    update: () => false,
+    delete: () => false,
+  },
   fields: {
     name: text({ isRequired: true }),
     // for descripiton you need a ui for the display mode
