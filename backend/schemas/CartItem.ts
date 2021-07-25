@@ -3,8 +3,15 @@
 
 import { integer, select, text, relationship } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
+import { rules, isSignedIn } from '../access';
 
 export const CartItem = list({
+  access: {
+    create: isSignedIn,
+    read: rules.canOrder,
+    update: rules.canOrder,
+    delete: rules.canOrder,
+  },
   // how the cart item will be displayed in keystone after creating and all
   ui: {
     listView: {
