@@ -1,6 +1,6 @@
 import { list } from '@keystone-next/keystone/schema';
 import { text, password, relationship } from '@keystone-next/fields';
-import { permissionFields } from './fields';
+// import { permissionFields } from './fields';
 
 // named export not export default name export is {}
 export const User = list({
@@ -30,5 +30,6 @@ export const User = list({
     // todo roles cart and orders of the user
     // because we need the user in the role and the role in the user
     role: relationship({ ref: 'Role.assignedTo' }),
+    // TODO: add access controls
   },
 });

@@ -725,18 +725,6 @@ export type RoleWhereInput = {
   readonly name_not_ends_with_i?: Scalars['String'] | null;
   readonly name_in?: ReadonlyArray<Scalars['String'] | null> | null;
   readonly name_not_in?: ReadonlyArray<Scalars['String'] | null> | null;
-  readonly canManageProducts?: Scalars['Boolean'] | null;
-  readonly canManageProducts_not?: Scalars['Boolean'] | null;
-  readonly canSeeOtherUsers?: Scalars['Boolean'] | null;
-  readonly canSeeOtherUsers_not?: Scalars['Boolean'] | null;
-  readonly canManageUsers?: Scalars['Boolean'] | null;
-  readonly canManageUsers_not?: Scalars['Boolean'] | null;
-  readonly canManageRoles?: Scalars['Boolean'] | null;
-  readonly canManageRoles_not?: Scalars['Boolean'] | null;
-  readonly canManageCart?: Scalars['Boolean'] | null;
-  readonly canManageCart_not?: Scalars['Boolean'] | null;
-  readonly canManageOrders?: Scalars['Boolean'] | null;
-  readonly canManageOrders_not?: Scalars['Boolean'] | null;
   readonly assignedTo_every?: UserWhereInput | null;
   readonly assignedTo_some?: UserWhereInput | null;
   readonly assignedTo_none?: UserWhereInput | null;
@@ -751,29 +739,11 @@ export type SortRolesBy =
   | 'id_DESC'
   | 'name_ASC'
   | 'name_DESC'
-  | 'canManageProducts_ASC'
-  | 'canManageProducts_DESC'
-  | 'canSeeOtherUsers_ASC'
-  | 'canSeeOtherUsers_DESC'
-  | 'canManageUsers_ASC'
-  | 'canManageUsers_DESC'
-  | 'canManageRoles_ASC'
-  | 'canManageRoles_DESC'
-  | 'canManageCart_ASC'
-  | 'canManageCart_DESC'
-  | 'canManageOrders_ASC'
-  | 'canManageOrders_DESC'
   | 'assignedTo_ASC'
   | 'assignedTo_DESC';
 
 export type RoleUpdateInput = {
   readonly name?: Scalars['String'] | null;
-  readonly canManageProducts?: Scalars['Boolean'] | null;
-  readonly canSeeOtherUsers?: Scalars['Boolean'] | null;
-  readonly canManageUsers?: Scalars['Boolean'] | null;
-  readonly canManageRoles?: Scalars['Boolean'] | null;
-  readonly canManageCart?: Scalars['Boolean'] | null;
-  readonly canManageOrders?: Scalars['Boolean'] | null;
   readonly assignedTo?: UserRelateToManyInput | null;
 };
 
@@ -784,12 +754,6 @@ export type RolesUpdateInput = {
 
 export type RoleCreateInput = {
   readonly name?: Scalars['String'] | null;
-  readonly canManageProducts?: Scalars['Boolean'] | null;
-  readonly canSeeOtherUsers?: Scalars['Boolean'] | null;
-  readonly canManageUsers?: Scalars['Boolean'] | null;
-  readonly canManageRoles?: Scalars['Boolean'] | null;
-  readonly canManageCart?: Scalars['Boolean'] | null;
-  readonly canManageOrders?: Scalars['Boolean'] | null;
   readonly assignedTo?: UserRelateToManyInput | null;
 };
 
@@ -1084,25 +1048,10 @@ export type OrderListFn = (
 
 export type RoleListTypeInfo = {
   key: 'Role';
-  fields:
-    | 'id'
-    | 'name'
-    | 'canManageProducts'
-    | 'canSeeOtherUsers'
-    | 'canManageUsers'
-    | 'canManageRoles'
-    | 'canManageCart'
-    | 'canManageOrders'
-    | 'assignedTo';
+  fields: 'id' | 'name' | 'assignedTo';
   backing: {
     readonly id: string;
     readonly name?: string | null;
-    readonly canManageProducts?: boolean | null;
-    readonly canSeeOtherUsers?: boolean | null;
-    readonly canManageUsers?: boolean | null;
-    readonly canManageRoles?: boolean | null;
-    readonly canManageCart?: boolean | null;
-    readonly canManageOrders?: boolean | null;
     readonly assignedTo?: string | null;
   };
   inputs: {

@@ -19,7 +19,7 @@ import { CartItem } from './schemas/CartItem';
 import { OrderItem } from './schemas/OrderItem';
 import { Order } from './schemas/Order';
 import { Role } from './schemas/Role';
-import { permissionsList } from './schemas/fields';
+// import { permissionsList } from './schemas/fields';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
@@ -117,7 +117,10 @@ export default withAuth(
       // so now we also want to pass the role of the user so that other query and mutation can take them  and use them as we have used name email id
       // you can't acces everything in graphql so we have just did something in the fields.ts to get all
       // while doing this we can run all the query in array in the grapqhl or the api explorer
-      User: `id name email role { ${permissionsList.join(' ')} }`,
+      User: 'id name email ',
     }),
   })
 );
+
+// { ${permissionsList.join(' ')} }
+//  role
