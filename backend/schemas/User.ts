@@ -44,6 +44,7 @@ export const User = list({
     // because we need the user in the role and the role in the user
     role: relationship({
       ref: 'Role.assignedTo',
+      // we want to limit the access to create role and all
       access: {
         create: permissions.canManageUsers,
         update: permissions.canManageUsers,
