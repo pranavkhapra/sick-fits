@@ -14,14 +14,12 @@ With an account set up, you'll have access to the bulk of the application, inclu
 
 ## How it Works
 
-It is built on a **Prisma** backend that's been deployed to Heroku, since they have an awesome integration set up. Another **GraphQL-Yoga** server sits on top of the backend, and acts as the proxy for the database manipulations, and also sits on Heroku!
-
 For the Frontend, it was built entirely in the _React_ framework **Next** for the quick loading, SSR, and Router, **Context** for state-management but also uses **Apollo's React Hooks** for interfacing with Apollo Client .....for GraphQL/caching. 
 
 **Apollo Client** for Data Management (performing GraphQL Mutations(create, update, delete) ,Queries for Fetching data,
 Caching GraphQL Data , Error and Loading UI States
 __Apollo Client replaces the need for redux + data fetching/caching libraries__
  
-For the Backend Keystone.js(A Node.js based GraphQL Server + Headless CMS) for -- building interface for admin to manage data , schema's,data relationships ,provides a set fo graphql crud api's for a mongodb database , implementing query and mutation resolvers ,charging credit cards with Stripe(Credit card checkout is also handled completely through **Stripe**, that way I don't have to touch any credit card details in the app 😁😁.),sending email
+For the Backend **Keystone.js**(A Node.js based GraphQL Server + Headless CMS) for -- building interface for admin to manage data , schema's,data relationships ,provides a set fo graphql crud api's for a mongodb database , implementing query and mutation resolvers ,charging credit cards with **Stripe**(Credit card checkout is also handled completely through **Stripe**, that way I don't have to touch any credit card details in the app 😁😁.),sending email
 ,performing authentication, lastly the most confusing thing ...managing + checking roles + permissions.
 
