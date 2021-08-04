@@ -30,6 +30,8 @@ const databaseURL =
 const sessionConfig = {
   maxAge: 60 * 60 * 24 * 360, // how long 360 days they should stay sign in
   secret: process.env.COOKIE_SECRET,
+  secure: process.env.NODE_ENV === 'production', // Defaults to true in production
+  sameSite: false,
 };
 const { withAuth } = createAuth({
   // it needs to be know that which schema is responsible for user can be customer or compnay and in our case user and their identify the person email or username
