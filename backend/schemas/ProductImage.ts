@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import 'dotenv/config';
 import { text, relationship } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
