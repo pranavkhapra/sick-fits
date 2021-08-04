@@ -61,7 +61,7 @@ async function checkout(
   const amount = cartItems.reduce(function(tally: number, cartItem: CartItemCreateInput) {
     return tally + cartItem.quantity * cartItem.product.price;
   }, 0);
-  console.log(cartItems.product)
+  // console.log(cartItems.product)
   // const description = cartItems.map(function(cartItem: CartItemCreateInput) {
   //   return cartItem.product.
   // }, 0);
@@ -74,7 +74,7 @@ async function checkout(
     // description:'Strings Workshop Payment by Tester',
     // name="testingCustomer",
     // description="Basically just testing things.... ",
-    currency:'INR',
+    currency:'USD',
     //charge the card immediately
     confirm:true,
     //comes form frontend when we use mutation
