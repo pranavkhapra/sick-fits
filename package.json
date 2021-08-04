@@ -5,10 +5,10 @@
   "author": "Pranav Khapra",
   "license": "MIT",
   "scripts": {
-    "dev": "keystone-next",
-    "seed-data": "keystone-next --seed-data",
+    "dev": "keystone-next dev",
+    "start": "keystone-next start",
     "build": "keystone-next build",
-    "start": "keystone-next start"
+    "seed-data": "keystone-next --seed-data"
   },
   "eslintConfig": {
     "extends": "wesbos/typescript.js",
