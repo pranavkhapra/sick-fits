@@ -1,11 +1,13 @@
 {
-  "name": "sick-fits-backend",
+  "name": "uzumaki-store-backend",
   "version": "2.0.0",
   "private": true,
   "author": "Pranav Khapra",
   "license": "MIT",
   "scripts": {
-    "dev": "keystone-next",
+    "dev": "keystone-next dev",
+    "start": "keystone-next start",
+    "build": "keystone-next build",
     "seed-data": "keystone-next --seed-data"
   },
   "eslintConfig": {
@@ -69,7 +71,7 @@
     "typescript": "^4.1.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=10.0.0"
   },
-  "repository": "https://github.com/pranavkhapra/uzumaki-store"
+  "repository": "https://github.com/pranavkhapra/uzumaki-store/tree/main/backend"
 }

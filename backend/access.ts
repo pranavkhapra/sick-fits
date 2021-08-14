@@ -1,12 +1,10 @@
-// At its simplest, the access control returns a yes or no value depending on the users session
-import { ListAccessArgs } from './types';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { permissionsList } from './schemas/fields';
+import { ListAccessArgs } from './types';
+// At it's simplest, the access control returns a yes or no value depending on the users session
 
-// this function have always have the access to context and inside
-// the context we have user session
-// list access args have the itemid and the session
 export function isSignedIn({ session }: ListAccessArgs) {
-  // if there is no session return false
   return !!session;
 }
 
@@ -18,21 +16,18 @@ const generatedPermissions = Object.fromEntries(
     },
   ])
 );
+
 // Permissions check if someone meets a criteria - yes or no.
-// additional permssionn function rather than and all
 export const permissions = {
   ...generatedPermissions,
   isAwesome({ session }: ListAccessArgs): boolean {
-    return session?.data.name.includes('pranav');
+    return session?.data.name.includes('wes');
   },
 };
 
 // Rule based function
-// used for list items
 // Rules can return a boolean - yes or no - or a filter which limits which products they can CRUD.
-// admin can do the thing or you are the owner of the item
 export const rules = {
-  // it always have a context that have session and all
   canManageProducts({ session }: ListAccessArgs) {
     if (!isSignedIn({ session })) {
       return false;
@@ -45,6 +40,9 @@ export const rules = {
     return { user: { id: session.itemId } };
   },
   canOrder({ session }: ListAccessArgs) {
+    if (!isSignedIn({ session })) {
+      return false;
+    }
     // 1. Do they have the permission of canManageProducts
     if (permissions.canManageCart({ session })) {
       return true;
@@ -53,6 +51,9 @@ export const rules = {
     return { user: { id: session.itemId } };
   },
   canManageOrderItems({ session }: ListAccessArgs) {
+    if (!isSignedIn({ session })) {
+      return false;
+    }
     // 1. Do they have the permission of canManageProducts
     if (permissions.canManageCart({ session })) {
       return true;
@@ -60,8 +61,10 @@ export const rules = {
     // 2. If not, do they own this item?
     return { order: { user: { id: session.itemId } } };
   },
-  //   people who can read all product can see all product that are sold or unavailable
   canReadProducts({ session }: ListAccessArgs) {
+    if (!isSignedIn({ session })) {
+      return false;
+    }
     if (permissions.canManageProducts({ session })) {
       return true; // They can read everything!
     }

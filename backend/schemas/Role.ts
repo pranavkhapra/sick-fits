@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { text, relationship } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
 import { permissionFields } from './fields';
