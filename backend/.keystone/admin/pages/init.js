@@ -1,15 +1,9 @@
-import { InitPage } from '@keystone-next/auth/pages/InitPage';
-import React from 'react';
-import { gql } from '@keystone-next/admin-ui/apollo';
+import { getInitPage } from '@keystone-next/auth/pages/InitPage';
 
 const fieldPaths = ['name', 'email', 'password'];
 
-export default function Init() {
-  return (
-    <InitPage
-      listKey="User"
-      fieldPaths={fieldPaths}
-      showKeystoneSignup={true}
-    />
-  );
-}
+export default getInitPage({
+  listKey: 'User',
+  fieldPaths: ['name', 'email', 'password'],
+  enableWelcome: true,
+});

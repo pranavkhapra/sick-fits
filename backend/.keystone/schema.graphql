@@ -42,9 +42,6 @@ type User {
   passwordResetToken_is_set: Boolean
   passwordResetIssuedAt: String
   passwordResetRedeemedAt: String
-  magicAuthToken_is_set: Boolean
-  magicAuthIssuedAt: String
-  magicAuthRedeemedAt: String
 }
 
 input UserWhereInput {
@@ -137,23 +134,6 @@ input UserWhereInput {
   passwordResetRedeemedAt_gte: String
   passwordResetRedeemedAt_in: [String]
   passwordResetRedeemedAt_not_in: [String]
-  magicAuthToken_is_set: Boolean
-  magicAuthIssuedAt: String
-  magicAuthIssuedAt_not: String
-  magicAuthIssuedAt_lt: String
-  magicAuthIssuedAt_lte: String
-  magicAuthIssuedAt_gt: String
-  magicAuthIssuedAt_gte: String
-  magicAuthIssuedAt_in: [String]
-  magicAuthIssuedAt_not_in: [String]
-  magicAuthRedeemedAt: String
-  magicAuthRedeemedAt_not: String
-  magicAuthRedeemedAt_lt: String
-  magicAuthRedeemedAt_lte: String
-  magicAuthRedeemedAt_gt: String
-  magicAuthRedeemedAt_gte: String
-  magicAuthRedeemedAt_in: [String]
-  magicAuthRedeemedAt_not_in: [String]
 }
 
 input UserWhereUniqueInput {
@@ -179,10 +159,6 @@ enum SortUsersBy {
   passwordResetIssuedAt_DESC
   passwordResetRedeemedAt_ASC
   passwordResetRedeemedAt_DESC
-  magicAuthIssuedAt_ASC
-  magicAuthIssuedAt_DESC
-  magicAuthRedeemedAt_ASC
-  magicAuthRedeemedAt_DESC
 }
 
 input UserUpdateInput {
@@ -196,9 +172,6 @@ input UserUpdateInput {
   passwordResetToken: String
   passwordResetIssuedAt: String
   passwordResetRedeemedAt: String
-  magicAuthToken: String
-  magicAuthIssuedAt: String
-  magicAuthRedeemedAt: String
 }
 
 input UsersUpdateInput {
@@ -217,9 +190,6 @@ input UserCreateInput {
   passwordResetToken: String
   passwordResetIssuedAt: String
   passwordResetRedeemedAt: String
-  magicAuthToken: String
-  magicAuthIssuedAt: String
-  magicAuthRedeemedAt: String
 }
 
 input UsersCreateInput {
@@ -298,20 +268,6 @@ input ProductWhereInput {
   photo_is_null: Boolean
   status: String
   status_not: String
-  status_contains: String
-  status_not_contains: String
-  status_starts_with: String
-  status_not_starts_with: String
-  status_ends_with: String
-  status_not_ends_with: String
-  status_i: String
-  status_not_i: String
-  status_contains_i: String
-  status_not_contains_i: String
-  status_starts_with_i: String
-  status_not_starts_with_i: String
-  status_ends_with_i: String
-  status_not_ends_with_i: String
   status_in: [String]
   status_not_in: [String]
   price: Int
@@ -1110,106 +1066,6 @@ input _ListSchemaFieldsInput {
   type: String
 }
 
-type Query {
-  """ Search for all User items which match the where clause. """
-  allUsers(where: UserWhereInput, search: String, sortBy: [SortUsersBy!], orderBy: String, first: Int, skip: Int): [User]
-
-  """ Search for the User item with the matching ID. """
-  User(where: UserWhereUniqueInput!): User
-
-  """ Perform a meta-query on all User items which match the where clause. """
-  _allUsersMeta(where: UserWhereInput, search: String, sortBy: [SortUsersBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the User list. """
-  _UsersMeta: _ListMeta
-
-  """ Search for all Product items which match the where clause. """
-  allProducts(where: ProductWhereInput, search: String, sortBy: [SortProductsBy!], orderBy: String, first: Int, skip: Int): [Product]
-
-  """ Search for the Product item with the matching ID. """
-  Product(where: ProductWhereUniqueInput!): Product
-
-  """ Perform a meta-query on all Product items which match the where clause. 
-  """
-  _allProductsMeta(where: ProductWhereInput, search: String, sortBy: [SortProductsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the Product list. """
-  _ProductsMeta: _ListMeta
-
-  """ Search for all ProductImage items which match the where clause. """
-  allProductImages(where: ProductImageWhereInput, search: String, sortBy: [SortProductImagesBy!], orderBy: String, first: Int, skip: Int): [ProductImage]
-
-  """ Search for the ProductImage item with the matching ID. """
-  ProductImage(where: ProductImageWhereUniqueInput!): ProductImage
-
-  """ Perform a meta-query on all ProductImage items which match the where clause. 
-  """
-  _allProductImagesMeta(where: ProductImageWhereInput, search: String, sortBy: [SortProductImagesBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the ProductImage list. """
-  _ProductImagesMeta: _ListMeta
-
-  """ Search for all CartItem items which match the where clause. """
-  allCartItems(where: CartItemWhereInput, search: String, sortBy: [SortCartItemsBy!], orderBy: String, first: Int, skip: Int): [CartItem]
-
-  """ Search for the CartItem item with the matching ID. """
-  CartItem(where: CartItemWhereUniqueInput!): CartItem
-
-  """ Perform a meta-query on all CartItem items which match the where clause. 
-  """
-  _allCartItemsMeta(where: CartItemWhereInput, search: String, sortBy: [SortCartItemsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the CartItem list. """
-  _CartItemsMeta: _ListMeta
-
-  """ Search for all OrderItem items which match the where clause. """
-  allOrderItems(where: OrderItemWhereInput, search: String, sortBy: [SortOrderItemsBy!], orderBy: String, first: Int, skip: Int): [OrderItem]
-
-  """ Search for the OrderItem item with the matching ID. """
-  OrderItem(where: OrderItemWhereUniqueInput!): OrderItem
-
-  """ Perform a meta-query on all OrderItem items which match the where clause. 
-  """
-  _allOrderItemsMeta(where: OrderItemWhereInput, search: String, sortBy: [SortOrderItemsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the OrderItem list. """
-  _OrderItemsMeta: _ListMeta
-
-  """ Search for all Order items which match the where clause. """
-  allOrders(where: OrderWhereInput, search: String, sortBy: [SortOrdersBy!], orderBy: String, first: Int, skip: Int): [Order]
-
-  """ Search for the Order item with the matching ID. """
-  Order(where: OrderWhereUniqueInput!): Order
-
-  """ Perform a meta-query on all Order items which match the where clause. 
-  """
-  _allOrdersMeta(where: OrderWhereInput, search: String, sortBy: [SortOrdersBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the Order list. """
-  _OrdersMeta: _ListMeta
-
-  """ Search for all Role items which match the where clause. """
-  allRoles(where: RoleWhereInput, search: String, sortBy: [SortRolesBy!], orderBy: String, first: Int, skip: Int): [Role]
-
-  """ Search for the Role item with the matching ID. """
-  Role(where: RoleWhereUniqueInput!): Role
-
-  """ Perform a meta-query on all Role items which match the where clause. """
-  _allRolesMeta(where: RoleWhereInput, search: String, sortBy: [SortRolesBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
-
-  """ Retrieve the meta-data for the Role list. """
-  _RolesMeta: _ListMeta
-
-  """ Retrieve the meta-data for all lists. """
-  _ksListsMeta(where: _ksListsMetaInput): [_ListMeta]
-
-  """The version of the Keystone application serving this API."""
-  appVersion: String
-  authenticatedItem: AuthenticatedItem
-  validateUserPasswordResetToken(email: String!, token: String!): ValidateUserPasswordResetTokenResult
-  keystone: KeystoneMeta!
-}
-
 type Mutation {
   """ Create a single User item. """
   createUser(data: UserCreateInput): User
@@ -1406,6 +1262,103 @@ enum PasswordResetRedemptionErrorCode {
   TOKEN_REDEEMED
 }
 
+type Query {
+  """ Search for all User items which match the where clause. """
+  allUsers(where: UserWhereInput, search: String, sortBy: [SortUsersBy!], orderBy: String, first: Int, skip: Int): [User]
+
+  """ Search for the User item with the matching ID. """
+  User(where: UserWhereUniqueInput!): User
+
+  """ Perform a meta-query on all User items which match the where clause. """
+  _allUsersMeta(where: UserWhereInput, search: String, sortBy: [SortUsersBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the User list. """
+  _UsersMeta: _ListMeta
+
+  """ Search for all Product items which match the where clause. """
+  allProducts(where: ProductWhereInput, search: String, sortBy: [SortProductsBy!], orderBy: String, first: Int, skip: Int): [Product]
+
+  """ Search for the Product item with the matching ID. """
+  Product(where: ProductWhereUniqueInput!): Product
+
+  """ Perform a meta-query on all Product items which match the where clause. 
+  """
+  _allProductsMeta(where: ProductWhereInput, search: String, sortBy: [SortProductsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the Product list. """
+  _ProductsMeta: _ListMeta
+
+  """ Search for all ProductImage items which match the where clause. """
+  allProductImages(where: ProductImageWhereInput, search: String, sortBy: [SortProductImagesBy!], orderBy: String, first: Int, skip: Int): [ProductImage]
+
+  """ Search for the ProductImage item with the matching ID. """
+  ProductImage(where: ProductImageWhereUniqueInput!): ProductImage
+
+  """ Perform a meta-query on all ProductImage items which match the where clause. 
+  """
+  _allProductImagesMeta(where: ProductImageWhereInput, search: String, sortBy: [SortProductImagesBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the ProductImage list. """
+  _ProductImagesMeta: _ListMeta
+
+  """ Search for all CartItem items which match the where clause. """
+  allCartItems(where: CartItemWhereInput, search: String, sortBy: [SortCartItemsBy!], orderBy: String, first: Int, skip: Int): [CartItem]
+
+  """ Search for the CartItem item with the matching ID. """
+  CartItem(where: CartItemWhereUniqueInput!): CartItem
+
+  """ Perform a meta-query on all CartItem items which match the where clause. 
+  """
+  _allCartItemsMeta(where: CartItemWhereInput, search: String, sortBy: [SortCartItemsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the CartItem list. """
+  _CartItemsMeta: _ListMeta
+
+  """ Search for all OrderItem items which match the where clause. """
+  allOrderItems(where: OrderItemWhereInput, search: String, sortBy: [SortOrderItemsBy!], orderBy: String, first: Int, skip: Int): [OrderItem]
+
+  """ Search for the OrderItem item with the matching ID. """
+  OrderItem(where: OrderItemWhereUniqueInput!): OrderItem
+
+  """ Perform a meta-query on all OrderItem items which match the where clause. 
+  """
+  _allOrderItemsMeta(where: OrderItemWhereInput, search: String, sortBy: [SortOrderItemsBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the OrderItem list. """
+  _OrderItemsMeta: _ListMeta
+
+  """ Search for all Order items which match the where clause. """
+  allOrders(where: OrderWhereInput, search: String, sortBy: [SortOrdersBy!], orderBy: String, first: Int, skip: Int): [Order]
+
+  """ Search for the Order item with the matching ID. """
+  Order(where: OrderWhereUniqueInput!): Order
+
+  """ Perform a meta-query on all Order items which match the where clause. 
+  """
+  _allOrdersMeta(where: OrderWhereInput, search: String, sortBy: [SortOrdersBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the Order list. """
+  _OrdersMeta: _ListMeta
+
+  """ Search for all Role items which match the where clause. """
+  allRoles(where: RoleWhereInput, search: String, sortBy: [SortRolesBy!], orderBy: String, first: Int, skip: Int): [Role]
+
+  """ Search for the Role item with the matching ID. """
+  Role(where: RoleWhereUniqueInput!): Role
+
+  """ Perform a meta-query on all Role items which match the where clause. """
+  _allRolesMeta(where: RoleWhereInput, search: String, sortBy: [SortRolesBy!], orderBy: String, first: Int, skip: Int): _QueryMeta
+
+  """ Retrieve the meta-data for the Role list. """
+  _RolesMeta: _ListMeta
+
+  """ Retrieve the meta-data for all lists. """
+  _ksListsMeta(where: _ksListsMetaInput): [_ListMeta]
+  authenticatedItem: AuthenticatedItem
+  validateUserPasswordResetToken(email: String!, token: String!): ValidateUserPasswordResetTokenResult
+  keystone: KeystoneMeta!
+}
+
 type KeystoneMeta {
   adminMeta: KeystoneAdminMeta!
 }
@@ -1436,18 +1389,13 @@ type KeystoneAdminUIListMeta {
   isHidden: Boolean!
 }
 
-type KeystoneAdminUISort {
-  field: String!
-  direction: KeystoneAdminUISortDirection!
-}
-
 type KeystoneAdminUIFieldMeta {
   path: String!
   label: String!
   isOrderable: Boolean!
   fieldMeta: JSON
-  viewsHash: String!
-  customViewsHash: String
+  viewsIndex: Int!
+  customViewsIndex: Int
   createView: KeystoneAdminUIFieldMetaCreateView!
   listView: KeystoneAdminUIFieldMetaListView!
   itemView(id: ID!): KeystoneAdminUIFieldMetaItemView
@@ -1457,17 +1405,13 @@ type KeystoneAdminUIFieldMetaCreateView {
   fieldMode: KeystoneAdminUIFieldMetaCreateViewFieldMode!
 }
 
-type KeystoneAdminUIFieldMetaListView {
-  fieldMode: KeystoneAdminUIFieldMetaListViewFieldMode!
-}
-
-type KeystoneAdminUIFieldMetaItemView {
-  fieldMode: KeystoneAdminUIFieldMetaItemViewFieldMode!
-}
-
 enum KeystoneAdminUIFieldMetaCreateViewFieldMode {
   edit
   hidden
+}
+
+type KeystoneAdminUIFieldMetaListView {
+  fieldMode: KeystoneAdminUIFieldMetaListViewFieldMode!
 }
 
 enum KeystoneAdminUIFieldMetaListViewFieldMode {
@@ -1475,10 +1419,19 @@ enum KeystoneAdminUIFieldMetaListViewFieldMode {
   hidden
 }
 
+type KeystoneAdminUIFieldMetaItemView {
+  fieldMode: KeystoneAdminUIFieldMetaItemViewFieldMode!
+}
+
 enum KeystoneAdminUIFieldMetaItemViewFieldMode {
   edit
   read
   hidden
+}
+
+type KeystoneAdminUISort {
+  field: String!
+  direction: KeystoneAdminUISortDirection!
 }
 
 enum KeystoneAdminUISortDirection {

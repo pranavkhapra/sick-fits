@@ -24,7 +24,7 @@ import { permissionsList } from './schemas/fields';
 function check(name: string) {}
 
 const databaseURL =
-  process.env.DATABASE_URL || 'mongodb://localhost/keystone-uzumaki-store';
+  process.env.MONGODB_URL || 'mongodb://localhost/keystone-uzumaki-store';
 
 // bascially we will create ths session config for the authentication and all of for the frontend
 // authenticate front end of the application we will create session

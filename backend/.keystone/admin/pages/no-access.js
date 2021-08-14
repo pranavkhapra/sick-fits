@@ -1,7 +1,3 @@
-import React from 'react';
+import { getNoAccessPage } from '@keystone-next/admin-ui/pages/NoAccessPage';
 
-import { NoAccessPage } from '@keystone-next/admin-ui/pages/NoAccessPage';
-
-export default function Home() {
-  return <NoAccessPage sessionsEnabled={true} />;
-}
+export default getNoAccessPage({ sessionsEnabled: true });
