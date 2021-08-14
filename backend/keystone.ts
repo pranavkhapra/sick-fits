@@ -62,8 +62,7 @@ export default withAuth(
     // cors will bascially helps like we are running backend on a diff port than frontend we need to allow to data got to  backend to frontend
     server: {
       cors: {
-        origin: process.env.FRONTEND_URL,
-        // it will pass the cookie
+        origin: [process.env.FRONTEND_URL],
         credentials: true,
       },
     },
