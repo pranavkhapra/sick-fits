@@ -32,7 +32,7 @@ function createClient({ headers, initialState }) {
       createUploadLink({
         // basically it is asking for the end point and production end point saved in config.js
         // end point is graphl api link
-        uri: endpoint,
+        uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
         // when we fetchdata from graphql api we need to have creedentials or cookie to know he is logged in and all
         //
         fetchOptions: {
