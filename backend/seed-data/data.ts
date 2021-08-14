@@ -32,8 +32,7 @@ export const products = [
         type: 'upload',
         etag: 'e1fdf84d5126b6ca2e1c8ef9532be5a5',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619261952/uzumaki_store/naruto_chair_dqod4h.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619261952/uzumaki_store/naruto_chair_dqod4h.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619261952/uzumaki_store/naruto_chair_dqod4h.jpg',
         original_filename: 'file',
@@ -72,8 +71,7 @@ export const products = [
         type: 'upload',
         etag: 'aebe8e9cc98ee4ad71682f19af85745b',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245383/uzumaki_store/kakashi_shoes_arx44f.png',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245383/uzumaki_store/kakashi_shoes_arx44f.png',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245383/uzumaki_store/kakashi_shoes_arx44f.png',
         original_filename: 'file',
@@ -112,8 +110,7 @@ export const products = [
         type: 'upload',
         etag: 'b6fbc18b196c68e2b87f51539b849e70',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245348/uzumaki_store/naruto-jacket_ujikgo.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245348/uzumaki_store/naruto-jacket_ujikgo.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245348/uzumaki_store/naruto-jacket_ujikgo.jpg',
         original_filename: 'file',
@@ -152,8 +149,7 @@ export const products = [
         type: 'upload',
         etag: 'ce0f36da93c60c5d4406657225206f70',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto__jacket3_vw6yvq.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto__jacket3_vw6yvq.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto__jacket3_vw6yvq.jpg',
         original_filename: 'file',
@@ -192,8 +188,7 @@ export const products = [
         type: 'upload',
         etag: '5550566c7fab113ba32d85ed08f54faa',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_shoes_f9iniz.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_shoes_f9iniz.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_shoes_f9iniz.jpg',
         original_filename: 'file',
@@ -232,8 +227,7 @@ export const products = [
         type: 'upload',
         etag: '3655bfd83998492b8421782db868c9df',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag2_q2vzdx.webp',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag2_q2vzdx.webp',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag2_q2vzdx.webp',
         original_filename: 'file',
@@ -272,8 +266,7 @@ export const products = [
         type: 'upload',
         etag: '3d68591332785ae5273ed43b1aa91712',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_jeans_d8kobi.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_jeans_d8kobi.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245380/uzumaki_store/naruto_jeans_d8kobi.jpg',
         original_filename: 'file',
@@ -312,8 +305,7 @@ export const products = [
         type: 'upload',
         etag: 'd89ab8ecc366bc63464a3eeef6ef3010',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag1_th6z5q.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag1_th6z5q.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245378/uzumaki_store/naruto_bag1_th6z5q.jpg',
         original_filename: 'file',
@@ -352,8 +344,7 @@ export const products = [
         type: 'upload',
         etag: '8aed0984d37a3d12faa832860b29d24b',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619263847/uzumaki_store/sasuke_bag_eduqql.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619263847/uzumaki_store/sasuke_bag_eduqql.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619263847/uzumaki_store/sasuke_bag_eduqql.jpg',
         original_filename: 'file',
@@ -392,8 +383,7 @@ export const products = [
         type: 'upload',
         etag: '3a4b97ef88c550dcd6c2d399d1bc698e',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_headband_ngktxl.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_headband_ngktxl.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_headband_ngktxl.jpg',
         original_filename: 'file',
@@ -432,8 +422,7 @@ export const products = [
         type: 'upload',
         etag: 'f9c8725f815a6873cbdc47ba3f869049',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_jacket2_syql9i.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_jacket2_syql9i.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619245377/uzumaki_store/naruto_jacket2_syql9i.jpg',
         original_filename: 'file',
@@ -472,8 +461,7 @@ export const products = [
         type: 'upload',
         etag: '44cf57f8218f135b82cfa5df0da92a49',
         placeholder: false,
-        url:
-          'https://res.cloudinary.com/pranav-khapra/image/upload/v1619264400/uzumaki_store/naruto_shoes2_yy95uo.jpg',
+        url: 'https://res.cloudinary.com/pranav-khapra/image/upload/v1619264400/uzumaki_store/naruto_shoes2_yy95uo.jpg',
         secure_url:
           'https://res.cloudinary.com/pranav-khapra/image/upload/v1619264400/uzumaki_store/naruto_shoes2_yy95uo.jpg',
         original_filename: 'file',
