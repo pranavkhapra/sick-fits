@@ -122,6 +122,12 @@ export default withAuth(
       // while doing this we can run all the query in array in the grapqhl or the api explorer
       User: `id name email role { ${permissionsList.join(' ')}}`,
     }),
+    graphql: {
+      apolloConfig: {
+        playground: true,
+        introspection: true,
+      },
+    },
   })
 );
 
