@@ -4,10 +4,7 @@
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import { createAuth } from '@keystone-next/auth';
-import {
-  withItemData,
-  statelessSessions,
-} from '@keystone-next/keystone/session';
+import { statelessSessions } from '@keystone-next/keystone/session';
 import { extendGraphqlSchema } from './mutations';
 
 import { User } from './schemas/User';
@@ -26,22 +23,13 @@ function check(name: string) {}
 const databaseURL =
   process.env.MONGODB_URL || 'mongodb://localhost/keystone-uzumaki-store';
 
-// bascially we will create ths session config for the authentication and all of for the frontend
-// authenticate front end of the application we will create session
-// create a cookie in browser that have jwt
-const sessionConfig = {
-  maxAge: 60 * 60 * 24 * 360, // how long 360 days they should stay sign in
-  secret: process.env.COOKIE_SECRET,
-  // secure: process.env.NODE_ENV === 'production', // Defaults to true in production
-  sameSite: 'none',
-secure: true
-};
 const { withAuth } = createAuth({
   // it needs to be know that which schema is responsible for user can be customer or compnay and in our case user and their identify the person email or username
 
   listKey: 'User',
   identityField: 'email',
   secretField: 'password',
+  sessionData: `id name email role { ${permissionsList.join(' ')}}`,
   // init first item if these are not there create them and them auth
   initFirstItem: {
     fields: ['name', 'email', 'password'],
@@ -57,6 +45,18 @@ const { withAuth } = createAuth({
   },
   // Todo:Add inn initial role and all
 });
+// bascially we will create ths session config for the authentication and all of for the frontend
+// authenticate front end of the application we will create session
+// create a cookie in browser that have jwt
+const sessionConfig = {
+  maxAge: 60 * 60 * 24 * 360, // how long 360 days they should stay sign in
+  secret: process.env.COOKIE_SECRET,
+  // secure: process.env.NODE_ENV === 'production', // Defaults to true in production
+  secure: true,
+  sameSite: 'none',
+};
+const session = statelessSessions(sessionConfig);
+
 // we just put the with auth around the config
 export default withAuth(
   config({
@@ -113,16 +113,15 @@ export default withAuth(
     // todo add session values here
     // bascially we just created a with auth so there would be cookie passed as a person is logged in so
     // send a cookie and give a session to the person
-    session: withItemData(statelessSessions(sessionConfig), {
-      // graphql query
-      // help so much in middle ware check user info and all
-      // we know the  session has some type of info about the currently logged in user and keystone has access to session to change the item update and keystone look after it to do those things
-      // so now in every single session we have query id name email and it uses it addToCart mutation and all
-      // so now we also want to pass the role of the user so that other query and mutation can take them  and use them as we have used name email id
-      // you can't acces everything in graphql so we have just did something in the fields.ts to get all
-      // while doing this we can run all the query in array in the grapqhl or the api explorer
-      User: `id name email role { ${permissionsList.join(' ')}}`,
-    }),
+    session,
+    // graphql query
+    // help so much in middle ware check user info and all
+    // we know the  session has some type of info about the currently logged in user and keystone has access to session to change the item update and keystone look after it to do those things
+    // so now in every single session we have query id name email and it uses it addToCart mutation and all
+    // so now we also want to pass the role of the user so that other query and mutation can take them  and use them as we have used name email id
+    // you can't acces everything in graphql so we have just did something in the fields.ts to get all
+    // while doing this we can run all the query in array in the grapqhl or the api explorer
+
     graphql: {
       apolloConfig: {
         playground: true,
