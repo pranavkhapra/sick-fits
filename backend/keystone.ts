@@ -52,8 +52,9 @@ const sessionConfig = {
   maxAge: 60 * 60 * 24 * 360, // how long 360 days they should stay sign in
   secret: process.env.COOKIE_SECRET,
   // secure: process.env.NODE_ENV === 'production', // Defaults to true in production
-  secure: true,
+  // secure: true,
   sameSite: 'none',
+  secure: true,
 };
 const session = statelessSessions(sessionConfig);
 
